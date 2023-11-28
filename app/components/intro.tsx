@@ -4,8 +4,10 @@ import Image from "next/image";
 import profilex from "../../public/profile.jpg";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
+
+
+import { ArrowRight, GithubIcon,  LinkedinIcon } from "lucide-react";
+import { LuArrowDownToLine } from "react-icons/lu";
 function Intro() {
   return (
     <section className="mb-28 max-w-[50rem] text-center mt-6 sm:mb-0 z-10">
@@ -63,7 +65,7 @@ function Intro() {
           className="group bg-gray-900 text-white flex items-center px-7 py-3 gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
           Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          <ArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
         <a
@@ -72,7 +74,7 @@ function Intro() {
           download
         >
           Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          <LuArrowDownToLine className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
         <a
@@ -80,7 +82,7 @@ function Intro() {
           target="_blank"
           className="bg-white p-4 text-gray-700 gap-2 ml-2 flex items-center rounded-full focus:scale-110 hover:scale-110  active:scale-105 transition"
         >
-          <BsLinkedin />
+          <LinkedinIcon size={19} />
         </a>
 
         <a
@@ -88,7 +90,7 @@ function Intro() {
           target="_blank"
           className="bg-white p-4 text-gray-700 gap-2 flex items-center rounded-full text-[1.15rem] focus:scale-[1.10] hover:scale-[1.10] hover:text-gray-950 active:scale-105 transition"
         >
-          <BsGithub />
+          <GithubIcon size={19}/>
         </a>
       </motion.div>
     </section>
