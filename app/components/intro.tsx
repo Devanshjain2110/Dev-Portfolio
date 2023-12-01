@@ -6,11 +6,13 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 
-import { ArrowRight, GithubIcon,  LinkedinIcon } from "lucide-react";
-import { LuArrowDownToLine } from "react-icons/lu";
+import { ArrowDownToLineIcon, ArrowRight, GithubIcon,  LinkedinIcon } from "lucide-react";
+import { useSectionInView } from "../customHooks/useSectionInView";
+
 function Intro() {
+  const {ref} = useSectionInView('Home', 0.5)
   return (
-    <section className="mb-28 max-w-[50rem] text-center mt-6 sm:mb-0 z-10">
+    <section id="home" ref={ref} className="mb-28 max-w-[50rem] text-center mt-6 sm:mb-0 z-10 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
         <div className="z-10 relative">
           <motion.div
@@ -74,7 +76,7 @@ function Intro() {
           download
         >
           Download CV{" "}
-          <LuArrowDownToLine className="opacity-60 group-hover:translate-y-1 transition" />
+          <ArrowDownToLineIcon className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
         <a

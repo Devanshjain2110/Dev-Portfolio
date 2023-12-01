@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import Intro from "./components/intro";
 import Sectiondivider from './components/sectiondivider';
 import About from './components/about';

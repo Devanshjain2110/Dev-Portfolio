@@ -5,14 +5,15 @@
 import React from "react";
 import SectionHeading from "./sectionheading";
 import { motion } from "framer-motion";
-// import { useSectionInView } from "@/lib/hooks";
+import { useSectionInView } from "../customHooks/useSectionInView";
+
 
 export default function About() {
-//   const { ref } = useSectionInView("About");
+  const { ref } = useSectionInView("About", 0.5);
 
   return (
     <motion.section
-    //   ref={ref}
+      ref={ref}
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
@@ -29,7 +30,7 @@ export default function About() {
         feeling of finally getting that red squibbly line out of the way. My core stack
         is{" "}
         <span className="font-medium">
-          React, Next.js, Tailwind, Redux , Java (DSA)
+          React, Next.js, Tailwind, Redux, trpc, Java (DSA)
         </span>
         . I am also familiar with TypeScript and Jest. I am always looking to
         learn new technologies. I am currently looking for a{" "}
@@ -38,10 +39,10 @@ export default function About() {
       </p>
 
       <p>
-        <span className="italic">When I'm not coding or reading docuentations</span>, I enjoy working out, reading novels, expanding my knowledge on various topics and meeting new people. I also enjoy{" "}
+        <span className="italic">When I'm not coding or reading docuentations</span>, I enjoy working out, reading novels, expanding my knowledge on various topics, liking cute cat reels on instagram and meeting new people. I also enjoy{" "}
         <span className="font-medium">learning new things</span>.In general, I am currently
         learning about {" "}
-        <span className="font-medium"> Indian politics and world affairs, </span> and keeping up with new happenings I'm also taking up jogging again, bit by bit.    
+        <span className="font-medium"> world affairs and history, </span> and keeping up with new happenings. I'm also taking up jogging again, bit by bit.    
       </p>
     </motion.section>
   );
