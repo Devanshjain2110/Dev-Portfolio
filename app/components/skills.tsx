@@ -28,7 +28,7 @@ function Skills() {
       </SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) =>(
-            <motion.li className="bg-white border border-black/[0.1] rounded-xl py-3 px-5" key={index} 
+            <motion.li className="bg-white borderBlack rounded-xl py-3 px-5" key={index} 
             variants={fadeInAnimationsVariants}
             initial='initial'
             whileInView='animate'

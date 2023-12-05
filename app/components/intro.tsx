@@ -8,9 +8,11 @@ import Link from "next/link";
 
 import { ArrowDownToLineIcon, ArrowRight, GithubIcon,  LinkedinIcon } from "lucide-react";
 import { useSectionInView } from "../customHooks/useSectionInView";
+import { useActiveSectionContext } from "../context/active-section-context";
 
 function Intro() {
   const {ref} = useSectionInView('Home', 0.5)
+  const {setActiveSection, setTimeOfLastClick} = useActiveSectionContext()
   return (
     <section id="home" ref={ref} className="mb-28 max-w-[50rem] text-center mt-6 sm:mb-0 z-10 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
@@ -65,13 +67,17 @@ function Intro() {
         <Link
           href="#contact"
           className="group bg-gray-900 text-white flex items-center px-7 py-3 gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contact")
+            setTimeOfLastClick(Date.now())
+        }}
         >
           Contact me here{" "}
           <ArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
         <a
-          className="group bg-white  px-7 py-3 gap-2 flex items-center rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition border-black/10 ml-2"
+          className="group bg-white  px-7 py-3 gap-2 flex items-center rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack ml-2"
           href="/CV.pdf"
           download
         >
@@ -82,7 +88,7 @@ function Intro() {
         <a
           href="https://www.linkedin.com/in/devanshja/"
           target="_blank"
-          className="bg-white p-4 text-gray-700 gap-2 ml-2 flex items-center rounded-full focus:scale-110 hover:scale-110  active:scale-105 transition"
+          className="bg-white p-4 text-gray-700 gap-2 ml-2 flex items-center rounded-full focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack"
         >
           <LinkedinIcon size={19} />
         </a>
@@ -90,7 +96,7 @@ function Intro() {
         <a
           href="https://github.com/Devanshjain2110"
           target="_blank"
-          className="bg-white p-4 text-gray-700 gap-2 flex items-center rounded-full text-[1.15rem] focus:scale-[1.10] hover:scale-[1.10] hover:text-gray-950 active:scale-105 transition"
+          className="bg-white p-4 text-gray-700 gap-2 flex items-center rounded-full text-[1.15rem] focus:scale-[1.10] hover:scale-[1.10] hover:text-gray-950 active:scale-105 transition borderBlack"
         >
           <GithubIcon size={19}/>
         </a>
