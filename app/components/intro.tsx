@@ -77,7 +77,7 @@ function Intro() {
         </Link>
 
         <a
-          className="group bg-white  px-7 py-3 gap-2 flex items-center rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack ml-2"
+          className="group bg-white  px-7 py-3 gap-2 flex items-center rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack ml-2 dark:bg-white/10"
           href="/CV.pdf"
           download
         >
@@ -88,7 +88,7 @@ function Intro() {
         <a
           href="https://www.linkedin.com/in/devanshja/"
           target="_blank"
-          className="bg-white p-4 text-gray-700 gap-2 ml-2 flex items-center rounded-full focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack"
+          className="bg-white p-4 text-gray-700 gap-2 ml-2 flex items-center rounded-full focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60"
         >
           <LinkedinIcon size={19} />
         </a>
@@ -96,7 +96,7 @@ function Intro() {
         <a
           href="https://github.com/Devanshjain2110"
           target="_blank"
-          className="bg-white p-4 text-gray-700 gap-2 flex items-center rounded-full text-[1.15rem] focus:scale-[1.10] hover:scale-[1.10] hover:text-gray-950 active:scale-105 transition borderBlack"
+          className="bg-white p-4 text-gray-700 gap-2 flex items-center rounded-full text-[1.15rem] focus:scale-[1.10] hover:scale-[1.10] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60"
         >
           <GithubIcon size={19}/>
         </a>

@@ -8,10 +8,12 @@ import {
   import "react-vertical-timeline-component/style.min.css";
 import { certificationsData } from '@/lib/data';
 import { useSectionInView } from '../customHooks/useSectionInView';
+import { useTheme } from '../context/theme-context';
 
 function Certifications() {
 
   const {ref} = useSectionInView('Certifications')
+  const { theme} = useTheme()
   return (
     <section ref={ref} id='certifications'className='scroll-mt-28 mb-28 sm:mb-40' >
       <SectionHeading> My Certifications</SectionHeading>
@@ -20,7 +22,7 @@ function Certifications() {
               certificationsData.map((certificate, index) => (
                 <React.Fragment  key={index}>
                 <VerticalTimelineElement contentStyle={{
-                  background : '#f3f4f6',
+                  background : theme === 'light'? '#f3f4f6': 'rgba(255,255,255,0.05)',
                   boxShadow: 'none',
                   border : '1px solid rgba(0,0,0,0.05)',
                   textAlign: "left",
@@ -28,12 +30,14 @@ function Certifications() {
                 }}
                 visible={true}
                 contentArrowStyle={{
-                  borderRight : '7px solid #9ca3af'
+                  borderRight :  theme === "light"
+                  ? "0.4rem solid #9ca3af"
+                  : "0.4rem solid rgba(255, 255, 255, 0.5)",
                 }}
                 date={certificate.date}
                 icon={certificate.icon}
                 iconStyle={{
-                  background : 'white',
+                  background :   theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
                   fontSize : '1.5rem',
                 }}
                 >
@@ -45,7 +49,7 @@ function Certifications() {
                       certificate.location
                     }
                   </p>
-                  <p className='!mt-1 !font-normal text-gray-700'>{certificate.description}</p>
+                  <p className='!mt-1 !font-normal text-gray-700 dark:text-white/75'>{certificate.description}</p>
                 </VerticalTimelineElement>
                 </React.Fragment>
               ))
