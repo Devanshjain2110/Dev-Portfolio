@@ -9,6 +9,7 @@ import {
 import { certificationsData } from '@/lib/data';
 import { useSectionInView } from '../customHooks/useSectionInView';
 import { useTheme } from '../context/theme-context';
+import Link from 'next/link';
 
 function Certifications() {
 
@@ -41,12 +42,12 @@ function Certifications() {
                   fontSize : '1.5rem',
                 }}
                 >
-                  <h3 className='font-semibold capitalize'>
+                  <Link href={certificate.link} target='_blank' className='font-semibold capitalize cursor-pointer underline'>
                     {certificate.title}
-                  </h3>
+                  </Link>
                   <p className='font-normal !mt-0'>
                     {
-                      certificate.location
+                      certificate.tech
                     }
                   </p>
                   <p className='!mt-1 !font-normal text-gray-700 dark:text-white/75'>{certificate.description}</p>

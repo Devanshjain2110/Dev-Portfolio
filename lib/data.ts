@@ -1,9 +1,9 @@
 import React from "react";
 
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
-import { Briefcase, GraduationCapIcon, Laptop2 } from "lucide-react";
+import QueryPDF from "@/public/QueryPDF.png";
+import BhookhLagiHai from "@/public/Bhookh_Lagi_Hai.png";
+import Slima from "@/public/Slima.png";
+import { Cloud, Laptop2 } from "lucide-react";
 
 export const links = [
   {
@@ -34,73 +34,71 @@ export const links = [
 
 export const certificationsData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "AWS Cloud Practitioner",
+    link : "https://www.credly.com/badges/ae367ea3-5710-44a9-82d5-59e274a79183/public_url",
+    tech : 'AWS',
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(GraduationCapIcon),
-    date: "2019",
+      "AWS Cloud Practitioner certified professional with foundational knowledge in cloud computing, demonstrating proficiency in AWS services and principles.",
+    icon: React.createElement(Cloud),
+    date: "2023",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(Briefcase),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+    title: "Namaste React by Akshay Saini",
+    link : "https://drive.google.com/drive/folders/1B_l8yrbmy3X9PIvbG6enhVqKV7qxMjSv",
+  tech : 'React',
+    description:"Namaste React by Akshay Saini is an insightful online course that provides a comprehensive guide to mastering React.js for web development.",
     icon: React.createElement(Laptop2),
-    date: "2021 - present",
+    date: "2023",
   },
+
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "QueryPDF",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "A SAAS product with an AI powered chatbot which allows user to interact with PDFs by asking questions and letting intelligent bot provide relevant insightful answers",
+    tags: ["Next.js", "TypeScript", "Trpc", "Prisma",'Pinecone','Tailwind'],
+    imageUrl: QueryPDF,
+    link : 'https://query-pdf.vercel.app/'
   },
   {
-    title: "rmtDev",
+    title: "Bhookh Lagi Hai?",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Developed a high-performance and responsive food ordering app, leveraging Swiggy’s live API to deliver real-time data to users",
+    tags: ["React", "React-Router", 'Redux-Toolkit', "Javascript", "Tailwind", "DaisyUI", 'Jest'],
+    imageUrl: BhookhLagiHai,
+    link : 'https://bhookh-lagi-hai.vercel.app/'
   },
   {
-    title: "Word Analytics",
+    title: "Slima",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Developed a scalable and performant video streaming app powered by Live Youtube Api",
+    tags: ["React", "React", "React-router", "Redux-toolkit", "Tailwindcss"],
+    imageUrl: Slima,
+    link : 'https://github.com/Devanshjain2110/Slima'  
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
   "React",
   "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
+  "TypeScript",
+  'Java',
+  "Trpc",
+  'zod',
   "Framer Motion",
+  "Tailwind",
+  'shadcn',
+  'daisyui',
+  'jest',
+  "JavaScript",
+  'KindeAuth',
+  'Resend',
+  'Firebase',
+  "Git",
+  "Redux Toolkit",
+  "HTML",
+  "CSS",
+
 ] as const;

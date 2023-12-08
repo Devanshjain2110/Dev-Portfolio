@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 
-import { ArrowDownToLineIcon, ArrowRight, GithubIcon,  LinkedinIcon } from "lucide-react";
+import { ArrowDownToLineIcon, ArrowRight, GithubIcon,  LinkedinIcon, Twitter } from "lucide-react";
 import { useSectionInView } from "../customHooks/useSectionInView";
 import { useActiveSectionContext } from "../context/active-section-context";
 
@@ -78,7 +78,7 @@ function Intro() {
 
         <a
           className="group bg-white  px-7 py-3 gap-2 flex items-center rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack ml-2 dark:bg-white/10"
-          href="/CV.pdf"
+          href="/Devansh_resume.pdf"
           download
         >
           Download CV{" "}
@@ -99,6 +99,13 @@ function Intro() {
           className="bg-white p-4 text-gray-700 gap-2 flex items-center rounded-full text-[1.15rem] focus:scale-[1.10] hover:scale-[1.10] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60"
         >
           <GithubIcon size={19}/>
+        </a>
+        <a
+          href="https://twitter.com/devansh_webdev"
+          target="_blank"
+          className="bg-white p-4 text-gray-700 gap-2 flex items-center rounded-full text-[1.15rem] focus:scale-[1.10] hover:scale-[1.10] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60"
+        >
+          <Twitter size={19}/>
         </a>
       </motion.div>
     </section>
