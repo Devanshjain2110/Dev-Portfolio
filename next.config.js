@@ -7,7 +7,9 @@ const nextConfig = {
             '@react-email/render',
             '@react-email/tailwind'
         ]
-    }
+    },
+ 
+
 }
 
 module.exports = nextConfig
